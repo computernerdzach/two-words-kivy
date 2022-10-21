@@ -1,4 +1,4 @@
-words = [
+words_list = [
     'people',
     'history',
     'way',

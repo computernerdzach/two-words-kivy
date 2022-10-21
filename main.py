@@ -3,7 +3,7 @@ from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from random import randint
 
-from words import words
+from words import words_list
 
 
 class MyLayout(BoxLayout):
@@ -19,10 +19,10 @@ class MyLayout(BoxLayout):
 
     def get_words(self, button):
         self.button.background_color = '#0096FF'
-        index1, index2 = randint(0, len(words)), randint(0, len(words))
+        index1, index2 = randint(0, len(words_list)), randint(0, len(words_list))
         while index1 == index2:
-            index2 = randint(0, len(words))
-        self.button.text = f'{words[index1].upper()}       and       {words[index2].upper()}'
+            index2 = randint(0, len(words_list))
+        self.button.text = f'{words_list[index1].upper()}       and       {words_list[index2].upper()}'
 
     def press_color(self, button):
         self.button.background_normal = ''
